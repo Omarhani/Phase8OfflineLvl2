@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Test Suite">
+    <test verbose="2" name="Chrome">
+        <classes>
+            <class name="login.LoginTests3">
+                <methods>
+                    <include name="testSuccessfulLogin"/>
+                    <include name="testSuccessfulLogin3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
