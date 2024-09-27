@@ -21,11 +21,13 @@ public class LoginTests extends BaseTests {
         LoginPage loginPage = homePage.clickOnSignupLoginLink();
         loginPage.loginFeature(dataModel().Login.ValidCredentials.Username,
                 dataModel().Login.ValidCredentials.Password);
+        myAssertEquals("Hello", "hello");
     }
     @Test
     public void testSuccessfulLogin3() throws FileNotFoundException {
         LoginPage loginPage = homePage.clickOnSignupLoginLink();
         loginPage.loginFeature(dataModel().Login.ValidCredentials.Username,
                 dataModel().Login.ValidCredentials.Password);
+        myAssertEquals("hello", "Hello");
     }
 }

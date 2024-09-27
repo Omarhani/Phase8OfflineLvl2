@@ -49,6 +49,37 @@ public class MethodHandles {
         setSteps();
         addBorderToElement(driver,webElement(locator));
     }
+    protected void clear(By locator, int time) {
+        explicitWait(locator, time);
+        webElement(locator).clear();
+        setSteps();
+        addBorderToElement(driver,webElement(locator));
+    }
+    protected String getText(By locator, int time) {
+        String text;
+        explicitWait(locator, time);
+        text = webElement(locator).getText();
+        setSteps();
+        addBorderToElement(driver,webElement(locator));
+        return text;
+    }
+    protected boolean isDisplayed(By locator, int time) {
+        boolean flag;
+        explicitWait(locator, time);
+        flag = webElement(locator).isDisplayed();
+        setSteps();
+        addBorderToElement(driver,webElement(locator));
+        return flag;
+    }
+    protected boolean isSelected(By locator, int time) {
+        boolean flag;
+        explicitWait(locator, time);
+        flag = webElement(locator).isSelected();
+        setSteps();
+        addBorderToElement(driver,webElement(locator));
+        return flag;
+    }
+
 
     protected void sendKeys(By locator, String text, int time) {
         explicitWait(locator, time);
